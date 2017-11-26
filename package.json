@@ -1,0 +1,25 @@
+{
+  "name": "@ijse/gatekeeper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./build/index.js",
+    "dev": "nodemon --watch src/**/* --exec 'ts-node' ./src/index.ts",
+    "build": "rm -rf build && tsc",
+    "postinstall": "npm run build"
+  },
+  "author": "ijse",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "@types/koa": "^2.0.41",
+    "@types/node": "^8.0.53",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-morgan": "^1.0.1",
+    "nodemon": "^1.12.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
+  }
+}
